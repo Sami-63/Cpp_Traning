@@ -26,7 +26,7 @@ int main()
     v1.pop_back(); /// delete last element
 
     v1.insert( v1.begin()+2 , 10); /// pos , val
-    v1.erase( v1.begin()+ 4); /// pos or first pos , last pos
+    v1.erase( v1.begin()+ 4); /// pos or v1.erase( first pos , last pos)
     sort( v1.begin() , v1.end() );
     reverse( v1.begin() , v1.end() );
 
