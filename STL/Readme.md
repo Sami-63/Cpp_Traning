@@ -1,6 +1,6 @@
 # Welcome to C++ 
 
-Here are some basic code to understand all the Standered Tamlete Libraries..
+Here are some basic code to understand all the Standard Tamlete Libraries..
 :)
 
 ### Have fun
