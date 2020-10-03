@@ -22,7 +22,7 @@ int main()
     }cout << endl << endl;
 
     priority_queue<int , vector<int> , greater<int> > pq2;
-    /// This pq store element in ascending order
+    /// This pq store element in ascending order .... MIN HEAP
     pq2.push(5);
     pq2.push(15);
     pq2.push(2);
