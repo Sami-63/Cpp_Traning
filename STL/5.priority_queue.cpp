@@ -17,11 +17,11 @@ int main()
 
     pq.push(19);
     pq.push(2);
-    pq.push(9);     /// priority queue e sob element descending order e sortedq thake
-    pq.push(21);    ///  top
-    pq.push(15);   ///   21  19 15 9 2
+    pq.push(9);  /// priority queue e sob element by default descending order e sorted thake
+    pq.push(21); ///  top
+    pq.push(15); ///   21  19 15 9 2
 
     showPq(pq);
-    pq.size();
+    cout << pq.size() << endl;
     return 0;
 }

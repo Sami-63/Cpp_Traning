@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <iterator>
+#include <iterator>  /// iterator is like pointer but nit pointer
 using namespace std;
 
 int main()
@@ -20,6 +20,8 @@ int main()
     it++;
     cout << *it << endl;
     it--;
+    cout << *it << endl;
+    it=it+3;
     cout << *it << endl << endl;
 
     it1 = v.begin();

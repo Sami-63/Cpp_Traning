@@ -32,15 +32,15 @@ int main()
 
     showSet(st);
     it = st.begin();
-    advance(it,3);
+    advance(it,3);  /// it = 5 er iterator
 
-    st.erase(it);
-    st.erase(15);
+    st.erase(it); /// erased by iterator
+    st.erase(15); /// erased by value
     showSet(st);
 
     it = st.begin()++;
     it++;
-    st.erase(it,st.end());
+    st.erase(it,st.end()); /// erase by range [start,end)
     showSet(st);
 
     cout << "Is empty -> " << st.empty() << endl;

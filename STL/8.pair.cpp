@@ -11,6 +11,7 @@ int main()
 
     cout << List1.first << ' ' << List1.second << endl;
     cout << List2.first << ' ' << List2.second << endl;
+    cout << List3.first << ' ' << List3.second << endl;
 
     return 0;
 }

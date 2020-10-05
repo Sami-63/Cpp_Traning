@@ -4,10 +4,12 @@ using namespace std;
 int main()
 {
     string str = "string 1";
-    str.size();
-    str.length();
+    cout << str << endl;
+    cout << str[1] << endl;
+    cout << str.size() << endl;
+    cout << str.length() << endl;
     str.clear();
-    str.empty();
+    cout << str.empty() << endl;
 
 
 
