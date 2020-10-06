@@ -1,17 +1,19 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <stack>
 using namespace std;
+#define sz 100
 
-int level[100];
 int n,m,x,y;
-vector<int> adj[100];
+vector<int> adj[sz],level(sz,-1),parent(sz);
 
 void bfs(int start)
 {
     queue<int>q;
     q.push(start);
     level[start]=0;
+    parent[start]= -1;
 
     while(!q.empty())
     {
@@ -19,9 +21,10 @@ void bfs(int start)
         q.pop();
 
         for( int &nxt : adj[cur])
-            if(!level[nxt]){
+            if(level[nxt]==-1){
                 level[nxt]=level[cur]+1;
                 q.push(nxt);
+                parent[nxt] = cur;
             }
     }
 
@@ -34,16 +37,35 @@ int main()
     {
         cin >> x >> y;
         adj[x].push_back(y);
-        adj[y].push_back(x);
     }
+
+
 
     int start,End;
     cout << "Enter source and destination :" << endl;
     cin >> start >> End;
 
     bfs(start);
-    cout << "Distance : "<< level[End] << endl;
+    if(~level[End])
+    {
+        cout << "Distance : "<< level[End] << endl;
 
+        stack<int>st;
+        while(End!= -1)
+        {
+            st.push(End);
+            End = parent[End];
+        }
+        cout << "Path -> ";
+        while(!st.empty())
+        {
+            cout << st.top() << ' ';
+            st.pop();
+        }
+        cout << endl;
+    }
+    else
+        cout << "No path is between " << start << " and " << End << endl;
     return 0;
 }
 /**
