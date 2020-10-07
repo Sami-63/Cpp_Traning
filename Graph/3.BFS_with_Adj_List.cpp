@@ -45,6 +45,7 @@ int main()
     cout << "Enter source and destination :" << endl;
     cin >> start >> End;
 
+
     bfs(start);
     if(~level[End])
     {
@@ -69,12 +70,14 @@ int main()
     return 0;
 }
 /**
-6 5
+7 8
 1 2
-2 3
-3 4
-4 5
+1 3
+3 2
+2 7
+7 5
 5 6
+6 4
+4 3
 
-1 6
 */
