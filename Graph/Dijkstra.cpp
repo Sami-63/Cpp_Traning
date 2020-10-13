@@ -6,7 +6,6 @@ using namespace std;
 
 #define pii pair<int,int>
 #define inf 9999
-int level[100];
 vector<int> adj[100],cost[100],nodeW(100,inf),parent(100,-1);
 priority_queue< pii , vector<pii> , greater<pii> >pq;
 
