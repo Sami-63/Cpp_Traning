@@ -1,0 +1,5 @@
+git status
+git add --all
+git add .
+git commit -m "massage"
+git push -u origin master
