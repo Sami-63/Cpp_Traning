@@ -2,4 +2,5 @@ git status
 git add --all
 git add .
 git commit -m "massage"
-git push -u origin master
+git push origin master
+git pull origin master
