@@ -4,3 +4,6 @@ git add .
 git commit -m "massage"
 git push origin master
 git pull origin master
+git clone -b branch_name url
+
+
