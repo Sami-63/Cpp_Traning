@@ -31,21 +31,21 @@ Question Set with Answers
 <div style="text-align:left">1. Answer the following Questions in short. (Any <b>Five</b>).</div>
 <div align="right">5 &times; 2 = 10 </div>
 
-(a)
+(a)    
 **Answer/Example Answer:**    
-(b)
+(b)   
 **Answer/Example Answer:**    
-(c)
+(c)   
 **Answer/Example Answer:**    
-(d)
+(d)   
 **Answer/Example Answer:**    
-(e)
+(e)   
 **Answer/Example Answer:**    
-(f)
+(f)   
 **Answer/Example Answer:**    
-(g)
+(g)   
 **Answer/Example Answer:**    
-(h)
+(h)   
 **Answer/Example Answer:**    
 
 
