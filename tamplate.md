@@ -52,16 +52,16 @@ Question Set with Answers
 <div align="left">2. Answer the following Questions. (Any <b>Four</b>).</div>
 <div align="right">4 &times; 5 = 20 </div>
 
-(a) Show LL rotation.
-**Answer/Example Answer:**
-(b)
-**Answer/Example Answer:**
-(c)
-**Answer/Example Answer:**
-(d)
-**Answer/Example Answer:**
-(e)
-**Answer/Example Answer:**
+(a) 
+**Answer/Example Answer:**   
+(b)   
+**Answer/Example Answer:**   
+(c)   
+**Answer/Example Answer:**   
+(d)   
+**Answer/Example Answer:**   
+(e)   
+**Answer/Example Answer:**   
 
 
 
@@ -69,59 +69,59 @@ Question Set with Answers
 <div align="right">2 &times; 10 = 20 </div>
 
 
-(a)
-**Answer/Example Answer:**
-(b)
-**Answer/Example Answer:**
-(c)
-**Answer/Example Answer:**
+(a)   
+**Answer/Example Answer:**   
+(b)   
+**Answer/Example Answer:**   
+(c)   
+**Answer/Example Answer:**   
 
 
 <div align="center"><h4>Group B</h4></div>
 <div style="text-align:left">1. Answer the following Questions in short. (Any <b>Five</b>).</div>
 <div align="right">5 &times; 2 = 10 </div>
 
-(a)
+(a)   
+**Answer/Example Answer:**     
+(b)   
+**Answer/Example Answer:**      
+(c)   
+**Answer/Example Answer:**     
+(d)   
 **Answer/Example Answer:**    
-(b)
+(e)   
 **Answer/Example Answer:**    
-(c)
+(f)   
 **Answer/Example Answer:**    
-(d)
+(g)   
 **Answer/Example Answer:**    
-(e)
-**Answer/Example Answer:**    
-(f)
-**Answer/Example Answer:**    
-(g)
-**Answer/Example Answer:**    
-(h)
+(h)   
 **Answer/Example Answer:**    
 
 
 <div align="left">2. Answer the following Questions. (Any <b>Four</b>).</div>
 <div align="right">4 &times; 5 = 20 </div>
 
-(a)
-**Answer/Example Answer:**
-(b)
-**Answer/Example Answer:**
-(c)
-**Answer/Example Answer:**
-(d)
-**Answer/Example Answer:**
-(e)
-**Answer/Example Answer:**
+(a)   
+**Answer/Example Answer:**   
+(b)   
+**Answer/Example Answer:**   
+(c)   
+**Answer/Example Answer:**   
+(d)   
+**Answer/Example Answer:**   
+(e)   
+**Answer/Example Answer:**   
 
 <div align="left">3. Answer the following Questions. (Any <b>Two</b>).</div>
 <div align="right">2 &times; 10 = 20 </div>
 
-(a)
-**Answer/Example Answer:**
-(b)
-**Answer/Example Answer:**
-(c)
-**Answer/Example Answer:**
+(a)   
+**Answer/Example Answer:**   
+(b)   
+**Answer/Example Answer:**   
+(c)   
+**Answer/Example Answer:**   
 
 
 <div style="text-align:center">
