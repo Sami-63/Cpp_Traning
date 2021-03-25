@@ -52,7 +52,7 @@ Question Set with Answers
 <div align="left">2. Answer the following Questions. (Any <b>Four</b>).</div>
 <div align="right">4 &times; 5 = 20 </div>
 
-(a) 
+(a)    
 **Answer/Example Answer:**   
 (b)   
 **Answer/Example Answer:**   
