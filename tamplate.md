@@ -11,7 +11,7 @@ Question Set with Answers
 =========================
 
 <div style="text-align:center">
-
+  <div align="center"><img src="sust-logo.png" alt="sust-logo" width="100px"></div>
   <div align="center">Shahjalal University of Science and Technology  </div>
   <div align = "center">Department of Computer Science and Engineering   </div>
   <div align = "center"><span> 1<sup>st</sup> Year 2<sup>nd</sup> Semester Final Examination &mdash;
