@@ -1,41 +1,85 @@
 
+/*-----Get ready to fight-----*/
+
 //  Author : As-Sami
-//  Time   : 2021-05-23 20:33:51
-//  Problem -> 
+//  Time   : 2021-05-27 16:34:04
 
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
-#define endl '\n'
-#define x first
-#define y second
-#define pb push_back
-#define pii pair<int,int>
+#define ll unsigned long long
 #define print(x) cout << #x << " = " << x << endl
-#define pi acos(-1)
-#define all(x) x.begin(),x.end()
-#define output(x) cout << x << " \n"[k==0]
-const int mod = 1e9+7;
+
+void solve(int T){
+    ll m,n;
+    cin >> m >> n;
+    vector<array<ll,3>>a(n);// t, max, rest
+    
+
+    for(auto &[x,y,z] : a)
+        cin >> x >> y >> z;
+
+
+    function<ll(ll)> f = [&](ll i){
+        ll sum = 0;
+
+        for( auto [t,lim,rest] : a)
+        {
+            sum += i/(t*lim+rest) *lim;
+            ll rem = i%(t*lim+rest);
+            if(rem/t > lim)
+                sum += lim;
+            else
+                sum += rem/t;
+        }
+        
+        return sum;
+    };
+
+    ll i=0,j=LLONG_MAX;
+    while(i<j){
+        ll mid = (i+j)/2;
+        if( f(mid)<m )
+            i = mid + 1;
+        else
+            j = mid;
+    }
+    cout << i << endl;
+
+    bool noprint=0;
+    ll all_sum=0;
+    for( auto [t,lim,rest] : a)
+    {
+        ll sum = i/(t*lim+rest) *lim;
+        ll rem = i%(t*lim+rest);
+        if(rem/t > lim)
+            sum += lim;
+        else
+            sum += rem/t;
+
+        if(all_sum+sum>m){
+            sum = m - all_sum;
+            cout << sum << ' ';
+            noprint=1;
+            continue;
+        }
+        else
+            all_sum += sum;
+
+        if(noprint)
+            cout << 0 << endl;
+        else
+            cout << sum << ' ';
+    }
+    cout << endl;
+}
 
 int main()
 {
-    int n,k;
-    cin >> n;
-    vector<int>a(n);
-    for( int i=0 ; i<n ; i++ )
-        cin >> a[i];
-
-    sort(all(a));
-    cin >> k;
-    while(k--)
-    {
-        int x,y,i=0,j=n-1,mid,flag=0;
-        cin >> x >> y;
-
-        output( ( upper_bound(all(a),y) - lower_bound(all(a),x)  ) );
-    }
-    
+    int t=1;
+    // cin >> t;
+    for( int i=0 ; i<t ; i++ )
+        solve(i+1);
     
     return 0;
 }
