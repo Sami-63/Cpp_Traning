@@ -1,85 +1,86 @@
+
+//     ____     _____         _____     ____     ___  ___   ____
+//    / __ \   / ____|       / ____|   / __ \   |   \/   |   ||
+//   / /__\ \  \____ \  ---  \____ \  / /__\ \  | |\__/| |   ||
+//  /_/    \_\ |_____/       |_____/ /_/    \_\ |_|    |_|  _||_
+
+//  Time   : 05-10-2021 | 23:17:32
+//  Problem -> Cf/ 20C - Dijkstra
+
 #include <iostream>
-#include <vector>
+#include <algorithm>
 #include <queue>
 #include <stack>
 using namespace std;
 
-#define pii pair<int,int>
-#define inf 9999
-vector<int> adj[100],cost[100],nodeW(100,inf),parent(100,-1);
-priority_queue< pii , vector<pii> , greater<pii> >pq;
+#define pb push_back
+#define int long long
+#define inf LLONG_MAX
+const int32_t N = 1e5+5;
+vector<pair<int,int>> g[N];
+int dis[N];
+int32_t par[N];
+bool vis[N];
 
-void Dijkstra(int start)
+int32_t main()
 {
-    nodeW[start] = 0;
-    pq.push({0,start});
+    int n,m;
+    cin >> n >> m;
 
-    while(!pq.empty())
+    for( int i=0 ; i<m ; i++ )
     {
-        int cst = pq.top().first, node = pq.top().second, newcost,curNode;
-        pq.pop();
-        for( int i=0 ; i<adj[node].size() ; i++ )
+        int x,y,z;
+        cin >> x >> y >> z;
+        g[x].pb({y,z});
+        g[y].pb({x,z});
+    }
+
+    for( int i=1 ; i<=n ; i++ )
+        dis[i] = inf, par[i]=-1;
+    
+
+    priority_queue< pair<int,int>, 
+            vector< pair<int,int>>,  
+           greater< pair<int,int>> >pq;
+
+    pq.push({0,1});
+    dis[1] = 0;
+    par[1]=-1;
+
+    while(!pq.empty()){
+        auto [cost, node] = pq.top(); pq.pop();
+
+        if(vis[node]) continue;
+        vis[node]=1;
+
+        for(auto [curNode,curCost] : g[node])
         {
-            newcost = cst + cost[node][i];
-            curNode= adj[node][i];
-            if(newcost<nodeW[curNode])
+            curCost += cost;
+
+            if(curCost < dis[curNode])
             {
-                nodeW[curNode] = newcost;
-                parent[curNode] = node;
-                pq.push({newcost,curNode});
+                dis[curNode] = curCost;
+                par[curNode] = node;
+                pq.push({curCost,curNode});
             }
         }
     }
 
-}
-int main()
-{
-	int n,m,x,y,z;
-	cin >> n >> m;
-	for( int i=0 ; i<m ; i++ )
-	{
-		cin >> x >> y >> z;
-		adj[x].push_back(y);
-		adj[y].push_back(x);
-		cost[x].push_back(z);
-		cost[y].push_back(z);
-	}
-
-	int from, des;
-	cin >> from >> des;
-    Dijkstra(from);
-
-    cout << "Path length from node " << from << " to node " << des << " is " << nodeW[des] << endl;
+    if(dis[n]==inf){
+        cout << -1 << endl;
+        return 0;
+    }
 
     stack<int>st;
-    int i = des;
-    st.push(i);
-    while(parent[i]!=-1)
-    {
-        st.push(parent[i]);
-        i = parent[i];
+    int32_t x=n;
+    while(x!=-1){
+        st.push(x);
+        x = par[x];
     }
 
-    cout << "Path way : ";
     while(!st.empty())
-    {
-        cout << st.top() << ' ';
-        st.pop();
-    }
-	return 0;
-}
-/**
-7 10
-1 3 1
-1 4 6
-3 4 2
-3 6 8
-4 5 9
-4 2 2
-2 6 1
-2 7 5
-6 5 2
-5 7 2
+        cout << st.top() << ' ', st.pop();
+    
 
-1 5
-*/
+    return 0;
+}
